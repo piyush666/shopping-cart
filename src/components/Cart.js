@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import PropTypes from 'prop-types';
 
 const Cart = ({ products, total, onCheckOutClicked }) => {
     const hasProducts = products.length;
@@ -29,4 +30,11 @@ const Cart = ({ products, total, onCheckOutClicked }) => {
         </div>
     )
 }
+
+Cart.propTypes = {
+    products: PropTypes.array,
+    total: PropTypes.string,
+    onCheckOutClicked: PropTypes.func,
+}
+
 export default Cart;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Product = ({ title, price, quantity }) =>
     <div>
@@ -7,5 +8,11 @@ const Product = ({ title, price, quantity }) =>
             <span>{quantity ? `x ${quantity}` : null}</span>
         </p>
     </div>
+
+Product.propTypes = {
+    price: PropTypes.number,
+    quantity: PropTypes.number,
+    title: PropTypes.string,
+}
 
 export default Product;
